@@ -12,6 +12,9 @@ For more details on the entire microservice architecture, refer to :
 - Generate a battle image between two Pokémon.
 - Generate a hypothetical evolution image from Pokémon1 to Pokémon2.
 
+## endpoints
+![Description of the image](/image_generator_endpoints.png)
+
 ## Technologies Used
 
 - Python
