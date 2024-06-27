@@ -26,10 +26,10 @@ def generate_image(prompt):
     }
 
     response = requests.post(url, json=payload, headers=headers)
-
     if response.status_code == 200:
         try:
             data = response.json()
+            print(response.json())
             return data['data'][0]['asset_url']
         except requests.exceptions.JSONDecodeError:
             print("Error decoding JSON response.")
