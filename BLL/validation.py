@@ -10,8 +10,5 @@ def input_validation(poke_name):
         response.raise_for_status()
         if response.status_code == 200:
             return True
-        else:
-            return False
-    except HTTPException as e:
-        raise HTTPException(status_code=500,detail=str(e))
-
+    except requests.exceptions.HTTPError:
+        raise HTTPException(status_code=404, detail=f'{poke_name} not found, double check pokemon name!')
